@@ -37,7 +37,7 @@ namespace NuGetGallery.Telemetry
         {
             // Arrange
             var telemetry = (ITelemetry)telemetryType.GetConstructor(new Type[] { }).Invoke(new object[] { });
-            telemetry.Context.Properties.Add("Test", "blala");
+            telemetry.Context.GlobalProperties.Add("Test", "blala");
 
             var headers = new NameValueCollection
             {
