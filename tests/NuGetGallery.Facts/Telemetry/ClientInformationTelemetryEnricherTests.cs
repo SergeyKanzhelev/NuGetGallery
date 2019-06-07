@@ -54,11 +54,11 @@ namespace NuGetGallery.Telemetry
             // Assert
             if (telemetry is RequestTelemetry)
             {
-                Assert.Equal(5, telemetry.Context.Properties.Count);
+                Assert.Equal(5, telemetry.Context.GlobalProperties.Count);
             }
             else
             {
-                Assert.Equal(1, telemetry.Context.Properties.Count);
+                Assert.Equal(1, telemetry.Context.GlobalProperties.Count);
             }
         }
 
